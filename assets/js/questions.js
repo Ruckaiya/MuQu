@@ -1,58 +1,38 @@
 const quizQuestions = [{
-        question: "What is my full name?",
-        choices: ["Esterling Accime", "Esterling", "Accime", "Sadrack Peterson"],
-        correctAnswer: "Esterling Accime. You can read about it more on- link provided "
+        question: "Where was the famous explorer of the medieval world Ibn Battuta born?",
+        choices: ["Egypt", "Morocco", "Iraq", "Libya"],
+        correctAnswer: "Morocco"
+
     },
 
     {
-        question: "What is your favorite sports?",
-        choices: ["Soccer", "Baseball", "Footbal", "Swimming"],
-        correctAnswer: "Soccer"
+        question: " The Ancient city of Damascus is located in which country?",
+        choices: ["Egypt", "Turkey", "Syria", "Lebanon"],
+        correctAnswer: "Syria"
     },
 
     {
-        question: "What is your favorite sports?",
-        choices: ["Soccer", "Baseball", "Footbal", "Swimming"],
-        correctAnswer: "Soccer"
+        question: "Can you guess the original name of Avicenna - the father of early modern medicine?",
+        choices: ["Sindband", "Ibn Sina", "Sikander", "Ibn Al Nafis"],
+        correctAnswer: "Ibn Sina"
     },
 
     {
-        question: "What is your favorite sports?",
-        choices: ["Soccer", "Baseball", "Footbal", "Swimming"],
-        correctAnswer: "Soccer"
+        question: "Which American comedian and political commentator hosted the White House correspondent's dinner in 2017?",
+        choices: ["Russell Peters", "John Oliver", "Hasan Minhaj", "Aziz Ansar"],
+        correctAnswer: "Hasan Minhaj"
     },
     {
-        question: "What is your favorite sports?",
-        choices: ["Soccer", "Baseball", "Footbal", "Swimming"],
-        correctAnswer: "Soccer"
+        question: "Which British Singer-Songwriter is famous for his work- The Peace Train?",
+        choices: ["Yusuf Islam", "Sami Yusuf", "Nadine Shah", "Natasha Khan"],
+        correctAnswer: "Yusuf Islam"
     },
     {
-        question: "What is your favorite sports?",
-        choices: ["Soccer", "Baseball", "Footbal", "Swimming"],
-        correctAnswer: "Soccer"
-    },
-    {
-        question: "What is your favorite sports?",
-        choices: ["Soccer", "Baseball", "Footbal", "Swimming"],
-        correctAnswer: "Soccer"
-    },
-    {
-        question: "What is your favorite sports?",
-        choices: ["Soccer", "Baseball", "Footbal", "Swimming"],
-        correctAnswer: "Soccer"
-    },
-    {
-        question: "What is your favorite sports?",
-        choices: ["Soccer", "Baseball", "Footbal", "Swimming"],
-        correctAnswer: "Soccer"
-    },
-
-
-    {
-        question: "What town did you live at?",
-        choices: ["Fort Liberte", "Ouanaminthe", "Petion Ville", "Delmas"],
-        correctAnswer: "Ouanaminthe"
+        question: "In which year did Soviet Union enter Afghanistan in order to gain control of the land?",
+        choices: ["1978", "1979", "1980", "1981"],
+        correctAnswer: "1979"
     }
+
 ];
 
 const funImages = [

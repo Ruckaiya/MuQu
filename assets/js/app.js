@@ -6,7 +6,7 @@ let lost = 0;
 let timer;
 
 $('#hint').hide();
-
+$('#refs').hide();
 
 // If the timer is over, then go to the next question
 function nextQuestion() {
@@ -35,7 +35,7 @@ function timeUp() {
 function countDown() {
     counter--;
 
-    $('#time').html('Timer: ' + counter);
+    $('#time').html('Timer: ' + counter + 's');
 
     if (counter === 0) {
         timeUp();
@@ -52,11 +52,12 @@ function loadQuestion() {
 
     $('#time').html('Timer: ' + counter);
     $('#game').html(`
-        <h1 style="text-align: left; padding: 30px 0; color: #000">${question}</h1>
+        <h1 style="text-align: left; padding: 30px 0; color: #000; font-size: 34px;">${question}</h1>
         ${loadChoices(choices)}
         ${loadRemainingQuestion()}
     `);
     $('#hint').show();
+    $('#refs').hide();
 
 }
 
@@ -93,13 +94,15 @@ $(document).on('click', '.choice', function () {
 
 function displayResult() {
     const result = `
-        <p>You get ${score} questions(s) right</p>
-        <p>You missed ${lost} questions(s)</p>
-        <p>Total questions ${quizQuestions.length} questions(s) right</p>
+            <p>Total questions: ${quizQuestions.length} <br> </p>
+
+        <p>You got ${score} questions right!</p>
+        <p>You missed ${lost} questions!</p>
         <button class="btn btn-primary" id="reset">Reset Game</button>
     `;
 
     $('#game').html(result);
+    $('#refs').hide();
 }
 
 
@@ -109,7 +112,6 @@ $(document).on('click', '#reset', function () {
     score = 0;
     lost = 0;
     timer = null;
-
     loadQuestion();
 });
 
@@ -133,20 +135,29 @@ function randomImage(images) {
 function preloadImage(status) {
     const correctAnswer = quizQuestions[currentQuestion].correctAnswer;
     $('#hint').hide();
+    $('#game').html(`
+            <div style= "padding-top: 30px;"> </div>
+      
+        `);
     if (status === 'win') {
         $('#game').html(`
-            <p class="preload-image">Congratulations, you pick the corrrect answer</p>
-            <p class="preload-image">The correct answer is <b>${correctAnswer}</b></p>
+            <p class="preload-image">Congratulations, you picked the corrrect answer!</p>
+            <p class="preload-image">The correct answer is <b>${correctAnswer}.</b></p>
             <img src="${randomImage(funImages)}" />
+           
         `);
-        
+
+
     } else {
         $('#game').html(`
-            <p class="preload-image">The correct answer was <b>${correctAnswer}</b></p>
-            <p class="preload-image">You lost pretty bad</p>
-            <img src="${randomImage(sadImages)}" />
+            <p class="preload-image">The correct answer was <b>${correctAnswer}.</b></p>
+            <p class="preload-image">You lost pretty bad!</p>
+            <img src="${randomImage(sadImages)}" />  
         `);
+
+
     }
+    $('#refs').show();
 }
 
 $('#start').click(function () {
@@ -154,4 +165,3 @@ $('#start').click(function () {
     $('#time').html(counter);
     loadQuestion();
 });
-
